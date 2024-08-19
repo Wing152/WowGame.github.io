@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes IdlePlayer{
+            0%{background-image: url(idleplayer0.png);
+                width: 111px;
+                height: 156px;
+                margin-top: 300px;}
+            14%{background-image: url(idleplayer1.png);
+                width: 111px;
+                height: 156px;
+                margin-top: 300px;}
+            28%{background-image: url(idleplayer2.png);
+                width: 111px;
+                height: 156px;
+                margin-top: 300px;}
+            43%{background-image: url(idleplayer3.png);
+                width: 111px;
+                height: 156px;
+                margin-top: 300px;}
+            57%{background-image: url(idleplayer4.png);
+                width: 111px;
+                height: 156px;
+                margin-top: 300px;}
+            72%{background-image: url(idleplayer5.png);
+                width: 111px;
+                height: 156px;
+                margin-top: 300px;}
+            86%{background-image: url(idleplayer6.png);
+                width: 111px;
+                height: 156px;
+                margin-top: 300px;}
+            100%{background-image: url(idleplayer7.png);
+                width: 111px;
+                height: 156px;
+                margin-top: 300px;}
+        }
+        @keyframes RunPlayer{
+            0%{background-image: url(runplayer0.png);
+                width: 138px;
+                height: 144px;
+                margin-top: 300px;}
+            14%{background-image: url(runplayer1.png);
+                width: 138px;
+                height: 144px;
+                margin-top: 300px;}
+            28%{background-image: url(runplayer2.png);
+                width: 138px;
+                height: 144px;
+                margin-top: 300px;}
+            43%{background-image: url(runplayer3.png);
+                width: 138px;
+                height: 144px;
+                margin-top: 300px;}
+            57%{background-image: url(runplayer4.png);
+                width: 138px;
+                height: 144px;
+                margin-top: 300px;}
+            72%{background-image: url(runplayer5.png);
+                width: 138px;
+                height: 144px;
+                margin-top: 300px;}
+            86%{background-image: url(runplayer6.png);
+                width: 138px;
+                height: 144px;
+                margin-top: 300px;}
+            100%{background-image: url(runplayer7.png);
+                width: 138px;
+                height: 144px;
+                margin-top: 300px;}
+        }
+        @keyframes RunLeftPlayer{
+            0%{background-image: url(runplayer7.png);
+                width: 138px;
+                height: 144px;
+                margin-top: 300px;}
+            14%{background-image: url(runplayer6.png);
+                width: 138px;
+                height: 144px;
+                margin-top: 300px;}
+            28%{background-image: url(runplayer5.png);
+                width: 138px;
+                height: 144px;
+                margin-top: 300px;}
+            43%{background-image: url(runplayer4.png);
+                width: 138px;
+                height: 144px;
+                margin-top: 300px;}
+            57%{background-image: url(runplayer3.png);
+                width: 138px;
+                height: 144px;
+                margin-top: 300px;}
+            72%{background-image: url(runplayer2.png);
+                width: 138px;
+                height: 144px;
+                margin-top: 300px;}
+            86%{background-image: url(runplayer1.png);
+                width: 138px;
+                height: 144px;
+                margin-top: 300px;}
+            100%{background-image: url(runplayer0.png);
+                width: 138px;
+                height: 144px;
+                margin-top: 300px;}
+        }
+        @keyframes JumpPlayer{
+            0%{background-image: url(jumpplayer0.png);
+                margin-top: 300px;
+                width: 114px;
+                height: 159px;}
+            33%{background-image: url(jumpplayer1.png);
+                margin-top: 50px;
+                width: 114px;
+                height: 159px;}
+            66%{background-image: url(jumpplayer2.png);
+                margin-top: 50px;
+                width: 144px;
+                height: 159px;}
+            100%{background-image: url(jumpplayer3.png);
+                margin-top: 300px;
+                width: 144px;
+                height: 159px;}
+        }
+        @keyframes AttackRightPlayer{
+            0%{background-image: url(attackright0.png);
+                margin-top: 300px;
+                width: 123px;
+                height: 159px;}
+            20%{background-image: url(attackright1.png);
+                margin-top: 300px;
+                width: 123px;
+                height: 159px;}
+            40%{background-image: url(attackright2.png);
+                margin-top: 300px;
+                width: 123px;
+                height: 159px;}
+            60%{background-image: url(attackright3.png);
+                margin-top: 300px;
+                width: 123px;
+                height: 159px;}
+            80%{background-image: url(attackright4.png);
+                margin-top: 250px;
+                width: 321px;
+                height: 207px;}
+            100%{background-image: url(attackright5.png);
+                margin-top: 250px;
+                width: 321px;
+                height: 207px;}
+        }
+        @keyframes AttackLeftPlayer{
+            0%{background-image: url(attackleft0.png);
+                margin-top: 300px;
+                width: 123px;
+                height: 159px;}
+            20%{background-image: url(attackleft1.png);
+                margin-top: 300px;
+                width: 123px;
+                height: 159px;}
+            40%{background-image: url(attackleft2.png);
+                margin-top: 300px;
+                width: 123px;
+                height: 159px;}
+            60%{background-image: url(attackleft3.png);
+                margin-top: 300px;
+                width: 123px;
+                height: 159px;}
+            80%{background-image: url(attackleft4.png);
+                margin-top: 250px;
+                width: 321px;
+                height: 207px;}
+            100%{background-image: url(attackleft5.png);
+                margin-top: 250px;
+                width: 321px;
+                height: 207px;}
+        }
+        @keyframes IdleComputer{
+            0%{background-image: url(idlecomputer0.png);
+                width: 99px;
+                height: 168px;}
+            33%{background-image: url(idlecomputer1.png);
+                width: 99px;
+                height: 168px;}
+            67%{background-image: url(idlecomputer2.png);
+                width: 99px;
+                height: 168px;}
+            100%{background-image: url(idlecomputer3.png);
+                width: 99px;
+                height: 168px;}
+        }
+        @keyframes RunRightComputer{
+            0%{background-image: url(runcomputer0.png);
+                width: 132px;
+                height: 141px;}
+            14%{background-image: url(runcomputer1.png);
+                width: 132px;
+                height: 141px;}
+            28%{background-image: url(runcomputer2.png);
+                width: 132px;
+                height: 141px;}
+            43%{background-image: url(runcomputer3.png);
+                width: 132px;
+                height: 141px;}
+            57%{background-image: url(runcomputer4.png);
+                width: 132px;
+                height: 141px;}
+            72%{background-image: url(runcomputer5.png);
+                width: 132px;
+                height: 141px;}
+            86%{background-image: url(runcomputer6.png);
+                width: 132px;
+                height: 141px;}
+            100%{background-image: url(runcomputer7.png);
+                width: 132px;
+                height: 141px;}
+        }
+        @keyframes RunLeftComputer{
+            0%{background-image: url(runcomputer7.png);
+                width: 132px;
+                height: 141px;}
+            14%{background-image: url(runcomputer6.png);
+                width: 132px;
+                height: 141px;}
+            28%{background-image: url(runcomputer5.png);
+                width: 132px;
+                height: 141px;}
+            43%{background-image: url(runcomputer4.png);
+                width: 132px;
+                height: 141px;}
+            57%{background-image: url(runcomputer3.png);
+                width: 132px;
+                height: 141px;}
+            72%{background-image: url(runcomputer2.png);
+                width: 132px;
+                height: 141px;}
+            86%{background-image: url(runcomputer1.png);
+                width: 132px;
+                height: 141px;}
+            100%{background-image: url(runcomputer0.png);
+                width: 132px;
+                height: 141px;}
+        }
+        @keyframes AttackLeftComputer{
+            0%{background-image: url(slashleft0.png);
+                margin-top: 300px;
+                width: 144px;
+                height: 162px;}
+            33%{background-image: url(slashleft1.png);
+                margin-top: 300px;
+                width: 144px;
+                height: 162px;}
+            66%{background-image: url(slashleft2.png);
+                margin-top: 200px;
+                width: 288px;
+                height: 252px;}
+            100%{background-image: url(slashleft3.png);
+                margin-top: 330px;
+                width: 219px;
+                height: 123px;}
+        }
+        @keyframes AttackRightComputer{
+            0%{background-image: url(slashright0.png);
+                margin-top: 300px;
+                width: 144px;
+                height: 162px;}
+            33%{background-image: url(slashright1.png);
+                margin-top: 300px;
+                width: 144px;
+                height: 162px;}
+            66%{background-image: url(slashright2.png);
+                margin-top: 200px;
+                width: 288px;
+                height: 252px;}
+            100%{background-image: url(slashright3.png);
+                margin-top: 330px;
+                width: 219px;
+                height: 123px;}
+        }
+        @keyframes JumpComputer{
+            0%{background-image: url(jumpcomputer0.png);
+                margin-top: 300px;
+                width: 114px;
+                height: 159px;}
+            33%{background-image: url(jumpcomputer1.png);
+                margin-top: 50px;
+                width: 114px;
+                height: 159px;}
+            66%{background-image: url(jumpcomputer2.png);
+                margin-top: 50px;
+                width: 111px;
+                height: 165px;}
+            100%{background-image: url(jumpcomputer3.png);
+                margin-top: 300px;
+                width: 111px;
+                height: 165px;}
+        }
+        @keyframes ComputerDead{
+            0%{background-image: url(deadcomputer0.png);
+                width: 99px;
+                height: 168px;
+                margin-top: 300px;}
+            20%{background-image: url(deadcomputer1.png);
+                width: 96px;
+                height: 153px;
+                margin-top: 315px;}
+            40%{background-image: url(deadcomputer2.png);
+                width: 116px;
+                height: 123px;
+                margin-top: 345px;}
+            60%{background-image: url(deadcomputer3.png);
+                width: 99px;
+                height: 135px;
+                margin-top: 333px;}
+            80%{background-image: url(deadcomputer4.png);
+                width: 159px;
+                height: 108px;
+                margin-top: 360px;}
+            100%{background-image: url(deadcomputer5.png);
+                width: 222px;
+                height: 39px;
+                margin-top: 428px;}
+        }
+        @keyframes PlayerDead{
+            0%{background-image: url(playerdead0.png);
+                width: 126px;
+                height: 159px;
+                margin-top: 303px;}
+            20%{background-image: url(playerdead1.png);
+                width: 129px;
+                height: 150px;
+                margin-top: 309px;}
+            40%{background-image: url(playerdead2.png);
+                width: 138px;
+                height: 144px;
+                margin-top: 315px;}
+            60%{background-image: url(playerdead3.png);
+                width: 144px;
+                height: 135px;
+                margin-top: 324px;}
+            80%{background-image: url(playerdead4.png);
+                width: 153px;
+                height: 123px;
+                margin-top: 336px;}
+            100%{background-image: url(playerdead5.png);
+                width: 144px;
+                height: 132px;
+                margin-top: 327px;}
+        }
+        body{
+            background-image: url(background.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #player{
+            width: 300px;
+            height: 25px;
+            background-color: aqua;
+            position: absolute;
+        }
+        #computer{
+            width: 320px;
+            height: 25px;
+            background-color: aqua;
+            position: absolute;
+            left: 760px;
+        }
+        #Player{
+            animation: IdlePlayer 0.5s linear infinite;
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: 10px;
+            position: absolute;
+        }
+        #Computer{
+            animation: IdleComputer 0.5s linear infinite;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-top: 300px;
+            left: 900px;
+            position: absolute;
+        }
+        .health{
+            border-style: double
+        }
+        .shop{
+            width: 354px;
+            height: 294px;
+            background-image: url(shop.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 160px;
+            left: 700px;
+        }
+        #winner{
+            border-radius: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 50px;
+            position: absolute;
+            text-align: center;
+            top: 200px;
+            left: 360px;
+            width: 350px;
+            height: 60px;
+        }
+        .home{
+            font-size: 30px;
+            background-color: aqua;
+            text-decoration-color: white;
+            border-radius: 20px;
+            position: absolute;
+            height: 75px;
+            width: 200px;
+            top: 10px;
+            left: 450px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="health" id="player"></div>
+    <div class="health" id="computer"></div>
+    <div class="shop"></div>
+    <div id="Player"></div>
+    <div id="Computer"></div>
+    <div id="winner"></div>
+    <script>
+        const Player = document.getElementById('Player');
+        const Computer = document.getElementById('Computer');
+        const Player_Health = document.getElementById('player');
+        const Computer_Health = document.getElementById('computer');
+        const Winner_display = document.getElementById('winner');
+        var Player_facing_left = false;
+        var Computer_facing_right = false;
+        const KeyBoard_Details = {
+            Player:{
+                Right:false,
+                Left:false,
+                Up:false,
+                Attack:false,
+            },
+            Computer:{
+                Right:false,
+                Left:false,
+                Up:false,
+                Attack:false,
+            }
+        }
+
+        const button_small = () => {
+            Button_x = parseInt(window.getComputedStyle(Home_button, null).getPropertyValue('left'));
+            Button_y = parseInt(window.getComputedStyle(Home_button, null).getPropertyValue('top'));
+            Button_width = parseInt(window.getComputedStyle(Home_button, null).getPropertyValue('width'));
+            Button_height = parseInt(window.getComputedStyle(Home_button, null).getPropertyValue('height'));
+            Home_button.style.width = (Button_width - 25) + "px";
+            Home_button.style.left = (Button_x + 12) + "px";
+            Home_button.style.height = (Button_height - 25) + "px";
+            Home_button.style.top = (Button_y + 12) + "px";
+        }
+        const button_normal = () => {
+            Button_x = parseInt(window.getComputedStyle(Home_button, null).getPropertyValue('left'));
+            Button_y = parseInt(window.getComputedStyle(Home_button, null).getPropertyValue('top'));
+            Button_width = parseInt(window.getComputedStyle(Home_button, null).getPropertyValue('width'));
+            Button_height = parseInt(window.getComputedStyle(Home_button, null).getPropertyValue('height'));
+            Home_button.style.width = (Button_width + 25) + "px";
+            Home_button.style.left = (Button_x - 12) + "px";
+            Home_button.style.height = (Button_height + 25) + "px";
+            Home_button.style.top = (Button_y - 12) + "px";
+        }
+
+        const dowhenkeydown = function (event){
+            switch(event.key){
+                case 'ArrowLeft':
+                    KeyBoard_Details.Player.Left = true;  
+                    break               
+                case 'ArrowRight':
+                    KeyBoard_Details.Player.Right = true;
+                    break;
+                case 'ArrowUp':
+                    KeyBoard_Details.Player.Up = true;
+                    break
+                case 'ArrowDown':
+                    KeyBoard_Details.Player.Attack = true;
+                    break
+                case 'm':
+                    KeyBoard_Details.Player.Fire = true;
+                    break
+                case 'a':
+                    KeyBoard_Details.Computer.Left = true;
+                    break
+                case 'd':
+                    KeyBoard_Details.Computer.Right = true;
+                    break
+                case 'w':
+                    KeyBoard_Details.Computer.Up = true;
+                    break
+                case 's':
+                    KeyBoard_Details.Computer.Attack = true;
+                    break
+                case 'h':
+                    KeyBoard_Details.Computer.Fire = true;
+                    break   
+            }
+        }
+        const dowhenkeyup = function (event){
+            switch(event.key){
+                case 'ArrowRight':
+                    Player.style.animationName = "IdlePlayer";
+                    KeyBoard_Details.Player.Right = false;
+                    break
+                case 'ArrowLeft':
+                    Player.style.animationName = "IdlePlayer";
+                    KeyBoard_Details.Player.Left = false;
+                    break
+                case 'ArrowUp':
+                    KeyBoard_Details.Player.Up = false;
+                    Player.style.animationName = "IdlePlayer";
+                    Player.style.animationDuration = "0.5s";
+                    break
+                case 'ArrowDown':
+                    KeyBoard_Details.Player.Attack = false;
+                    Player.style.animationDuration = "0.5s";
+                    Player.style.animationName = "IdlePlayer";
+                    break
+                case 'a':
+                    Computer.style.animationName = "IdleComputer";
+                    KeyBoard_Details.Computer.Left = false;
+                    break
+                case 'd':
+                    Computer.style.animationName = "IdleComputer";
+                    KeyBoard_Details.Computer.Right = false;
+                    break
+                case 'w':
+                    Computer.style.animationDuration = "0.5s";
+                    Computer.style.animationName = "IdleComputer";
+                    KeyBoard_Details.Computer.Up = false;
+                    break
+                case 's':
+                    Computer.style.animationDuration = "0.5s";
+                    Computer.style.animationName = "IdleComputer";
+                    KeyBoard_Details.Computer.Attack = false;
+                    break
+            }
+        }
+        window.addEventListener('keydown', (event) => {dowhenkeydown(event)})
+        window.addEventListener('keyup', (event) => {dowhenkeyup(event)})
+        window.setInterval(() => {
+            if(KeyBoard_Details.Player.Right){
+                Player_facing_left = false;
+                Player.style.animationName = "RunPlayer";
+                Player_x = parseInt(window.getComputedStyle(Player, null).getPropertyValue('left'));
+                Player.style.left = (Player_x + 20) + "px";
+            }
+            if(KeyBoard_Details.Player.Left){
+                Player_facing_left = true;
+                Player.style.animationName = "RunLeftPlayer";
+                Player_x = parseInt(window.getComputedStyle(Player, null).getPropertyValue('left'));
+                Player.style.left = (Player_x - 20) + "px";
+            }
+            if(KeyBoard_Details.Player.Up){
+                Player.style.animationDuration = "1s";
+                Player.style.animationName = "JumpPlayer";
+            }
+            if(KeyBoard_Details.Player.Attack){
+                Player.style.animationDuration = "0.5s";
+                Chealth = parseInt(window.getComputedStyle(Computer_Health, null).getPropertyValue('width'));
+                Player_x = parseInt(window.getComputedStyle(Player, null).getPropertyValue('left'));
+                Computer_x = parseInt(window.getComputedStyle(Computer, null).getPropertyValue('left'));
+                Computer_y = parseInt(window.getComputedStyle(Computer, null).getPropertyValue('margin-top'));
+                Computer_width = parseInt(window.getComputedStyle(Computer, null).getPropertyValue('width'));
+                Player_width = parseInt(window.getComputedStyle(Player, null).getPropertyValue('width'));
+                if(!(Computer_y<300)){
+                    if(Player_facing_left){
+                        Player.style.animationName = "AttackLeftPlayer";
+                        if(Player_x > Computer_x && Player_x < (Computer_x + Computer_width)){
+                            if(Chealth>10){
+                                Computer_Health.style.width = (Chealth - 5) + "px";
+                            }
+                            else{
+                                Computer.style.animationDuration = "0.5s";
+                                Computer.style.animationIterationCount = "1";
+                                Computer.style.animationName = "ComputerDead";
+                                Winner_display.innerHTML = "Player1 wins!"
+                                Winner_display_decoration();
+                            }
+                        }
+                    }
+                    else{
+                        Player.style.animationName = "AttackRightPlayer";
+                        if(Computer_x > Player_x && Computer_x < (Player_x + Player_width)){
+                            if(Chealth>10){
+                                Computer_Health.style.width = (Chealth - 5) + "px";
+                            }
+                            else{
+                                Computer.style.animationDuration = "1s";
+                                Computer.style.animationIterationCount = "1";
+                                Computer.style.animationName = "ComputerDead";
+                                Winner_display.innerHTML = "Player1 wins!"
+                                Winner_display_decoration();
+                            }
+                        }
+                    }
+                }
+                delete Chealth;
+                delete Player_x;
+                delete Computer_x;
+                delete Computer_width;
+                delete Player_width;
+            }
+            if(KeyBoard_Details.Computer.Left){
+                Computer_facing_right = false;
+                Computer.style.animationName = "RunLeftComputer";
+                Computer_x = parseInt(window.getComputedStyle(Computer, null).getPropertyValue('left'));
+                Computer.style.left = (Computer_x - 20) + "px";
+            }
+            if(KeyBoard_Details.Computer.Right){
+                Computer_facing_right = true;
+                Computer.style.animationName = "RunRightComputer";
+                Computer_x = parseInt(window.getComputedStyle(Computer, null).getPropertyValue('left'));
+                Computer.style.left = (Computer_x + 20) + "px";
+            }
+            if(KeyBoard_Details.Computer.Up){
+                Computer.style.animationName = "JumpComputer";
+                Computer.style.animationDuration = "1s";
+            }
+            if(KeyBoard_Details.Computer.Attack){
+                Computer.style.animationDuration = "0.5s";
+                Phealth = parseInt(window.getComputedStyle(Player_Health, null).getPropertyValue('width'));
+                Player_x = parseInt(window.getComputedStyle(Player, null).getPropertyValue('left'));
+                Player_y = parseInt(window.getComputedStyle(Player, null).getPropertyValue('margin-top'));
+                Computer_x = parseInt(window.getComputedStyle(Computer, null).getPropertyValue('left'));
+                Computer_width = parseInt(window.getComputedStyle(Computer, null).getPropertyValue('width'));
+                Player_width = parseInt(window.getComputedStyle(Player, null).getPropertyValue('width'));
+                if(!(Player_y<300)){
+                    if(Computer_facing_right){
+                        Computer.style.animationName = "AttackRightComputer";
+                        if(Phealth>10){
+                            if(Player_x > Computer_x && Player_x < (Computer_x + Computer_width)){
+                                Player_Health.style.width = (Phealth - 5) + "px";
+                            }
+                        }
+                        else{
+                            Player.style.animationDuration = "0.5s";
+                            Player.style.animationIterationCount = "1";
+                            Player.style.animationName = "PlayerDead";
+                            Winner_display.innerHTML = "Player2 wins!";
+                            Winner_display_decoration();
+                        }
+                    }
+                    else{
+                        Computer.style.animationName = "AttackLeftComputer";
+                        if(Phealth>10){
+                            if(Computer_x > Player_x && Computer_x < (Player_x + Player_width)){
+                                Player_Health.style.width = (Phealth - 5) + "px";
+                            }
+                        }
+                        else{
+                            Player.style.animationDuration = "1s";
+                            Player.style.animationIterationCount = "1";
+                            Player.style.animationName = "PlayerDead";
+                            Winner_display.innerHTML = "Player2 wins!"
+                            Winner_display_decoration();
+                        }
+                    }
+                }
+            }
+            delete Phealth;
+            delete Player_x;
+            delete Computer_x;
+            delete Computer_width;
+            delete Player_width;
+        }, 50)
+        const Winner_display_decoration = () => {
+            Winner_display.style.borderStyle = "dashed";
+            Winner_display.style.borderRadius = 20 + "px";
+        }
+    </script>
+</body>
+</html>
